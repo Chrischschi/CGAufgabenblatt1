@@ -1,6 +1,5 @@
 package computergraphics.applications;
 
-import javax.media.opengl.awt.GLJPanel;
 
 import computergraphics.framework.AbstractCGFrame;
 import computergraphics.math.Vector3;
