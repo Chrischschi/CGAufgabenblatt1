@@ -1,15 +1,10 @@
 package computergraphics.applications;
 
-import javax.media.opengl.awt.GLJPanel;
 
 import computergraphics.framework.AbstractCGFrame;
 import computergraphics.math.Vector3;
-import computergraphics.scenegraph.BetterTriangleNode;
 import computergraphics.scenegraph.ColorNode;
-import computergraphics.scenegraph.RotationNode;
-import computergraphics.scenegraph.ScaleNode;
 import computergraphics.scenegraph.SingleTriangleNode;
-import computergraphics.scenegraph.TranslationNode;
 
 /**
  * Application for the first exercise.
