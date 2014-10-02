@@ -33,42 +33,18 @@ public class CGFrame extends AbstractCGFrame {
 	public CGFrame(int timerInverval) {
 		super(timerInverval);
 		ColorNode colorNode = new ColorNode(new Vector3(0.25, 0.25, 0.75));
-		ColorNode colorNode2 = new ColorNode(new Vector3(0, 1, 0));
-		
-		//
-		ScaleNode scaleNode = new ScaleNode(new Vector3(1, 1, 1));
-		RotationNode rotationNode = new RotationNode(new Vector3(1,0,0), 87);
-		
 		SingleTriangleNode triangleNode = new SingleTriangleNode();
-		SingleTriangleNode triangleNode2 = new SingleTriangleNode();
 		
+		//ScaleNode hinzufügen, um das objekt doppelt so groß zu zeichnen
+		// Die Achsen x y z werden gleichmässig skaliert
+		ScaleNode scaleNode = new ScaleNode(new Vector3(2,2,2)); 
 		
-		BetterTriangleNode betterTriangle = new BetterTriangleNode();
-		
-		
-		TranslationNode trans = new TranslationNode(new Vector3(1,1,0));
-		
-//		getRoot().addChild(colorNode);
-//		colorNode.addChild(triangleNode);
-		
-		getRoot().addChild(rotationNode);
-		rotationNode.addChild(trans);
-		
-		
-//		getRoot().addChild(colorNode2);
-//		colorNode2.addChild(triangleNode2);
-		
-//		getRoot().addChild(trans);
-		trans.addChild(colorNode);
-		colorNode.addChild(betterTriangle);
-		
-		
-		//
-//		getRoot().addChild(scaleNode);
-//		scaleNode.addChild(triangleNode);
-//		scaleNode.addChild(colorNode);
-		
-		
+		getRoot().addChild(colorNode);
+		colorNode.addChild(scaleNode);
+		//triangleNode muss im baum ein kind von scaleNode sein
+		//damit die scaleNode methode sich auf die darstellung von
+		//triangleNode auswirkt. 
+		scaleNode.addChild(triangleNode); 
 		
 	}
 
