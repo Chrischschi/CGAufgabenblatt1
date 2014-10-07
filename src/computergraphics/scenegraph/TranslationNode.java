@@ -4,7 +4,10 @@
  * 		   Christian Schirin (christian.schirin@haw-hamburg.de)
  * Aufgabe: Aufgabenblatt 1, Aufgabe 2a
  * Verwendete Quellen:
- *  
+ * Zeyang Li , Transformations in OpenGL, Carnegie Mellon University,
+ * URL: 
+ * http://www.cs.cmu.edu/afs/cs/academic/class/15462-s09/www/lec/03/lec03a.pdf
+ * (Zugegriffen am 1.10.2014)
  */
 package computergraphics.scenegraph;
 
@@ -13,7 +16,7 @@ import javax.media.opengl.GL2;
 import computergraphics.math.Vector3;
 
 /**
- * Diese Klasse ermöglicht es in einem Szenengraph Translationen umzusetzen.
+ * Diese Klasse ermÃ¶glicht es in einem Szenengraph Translationen umzusetzen.
  * Translationen werden durch einen 3D-Vektor dargestellt. 
  * @author Andreas & Christian
  *
@@ -34,7 +37,7 @@ public class TranslationNode extends Node{
 	
 	@Override
 	/**
-	 * Sorgt dafür, dass alle Kindknoten dieses Knotens um einen Translations-
+	 * Sorgt dafï¿½r, dass alle Kindknoten dieses Knotens um einen Translations-
 	 * vektor verschoben werden. Inspiriert von ScaleNode#drawGl(GL2) 
 	 */
 	public void drawGl(GL2 gl) {
@@ -42,7 +45,7 @@ public class TranslationNode extends Node{
 		// Remember current state of the render system
 				gl.glPushMatrix();
 
-		// cast von double auf float, um openGL-Funktion verwenden zu können. 
+		// cast von double auf float, um openGL-Funktion verwenden zu kï¿½nnen. 
 		gl.glTranslatef((float) factor.get(0), (float) factor.get(1),
 				(float) factor.get(2));		
 		

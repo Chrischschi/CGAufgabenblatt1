@@ -1,8 +1,22 @@
+/**
+ * Praktikum WPCG, WS 14/15, Gruppe 2
+ * Gruppe: Andreas Mauritz (andreas.mauritz@haw-hamburg.de)
+ * 		   Christian Schirin (christian.schirin@haw-hamburg.de)
+ * Aufgabe: Aufgabenblatt 1, Bonusaufgabe (Neu)
+ */
 package computergraphics.scenegraph;
 
 import javax.media.opengl.GL2;
 
+/** Stellt eine Pyramidenform im Szenengraph dar .
+ * 
+ * @author Christian, Andreas
+ *
+ */
 public class PyramidNode extends Node {
+	
+	//Punkte A-D = punkte der grundfläche
+	//Punkt S = die spitze der pyramide
 	
 	// A
 	float ax = -1.0f;
@@ -32,8 +46,12 @@ public class PyramidNode extends Node {
 	public void drawGl(GL2 gl) {
 		
 		gl.glColor3f(0.75f, 0.25f, 0.25f);
+		
+		// Es müssen fünf facetten gezeichnet werden, 
+		// Die grundfläche und die vier seiten der pyramide 
+		
 
-		gl.glBegin(GL2.GL_QUADS);
+		gl.glBegin(GL2.GL_QUADS); //Die grundfläche als Quadrat zeichnen
 	    	    
 	    // BOTTOM SQUARE
 		gl.glNormal3f(0, 0, 1);
@@ -55,7 +73,7 @@ public class PyramidNode extends Node {
 	    gl.glEnd();
 	    
 	    
-	    gl.glBegin(GL2.GL_TRIANGLES);
+	    gl.glBegin(GL2.GL_TRIANGLES); // Die seiten als Dreieck zeichnen
 	    
 	    // 1. TRIANGLE
 		gl.glNormal3f(0, 0, 1);

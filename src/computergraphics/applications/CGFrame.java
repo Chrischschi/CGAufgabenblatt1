@@ -1,3 +1,9 @@
+/*
+ * Praktikum WPCG, WS 14/15, Gruppe 2
+ * Gruppe: Andreas Mauritz (andreas.mauritz@haw-hamburg.de)
+ * 		   Christian Schirin (christian.schirin@haw-hamburg.de)
+ * Aufgabe: Aufgabenblatt 1
+ */
 package computergraphics.applications;
 
 
@@ -12,6 +18,7 @@ import computergraphics.scenegraph.TranslationNode;
 
 /**
  * Application for the first exercise.
+ * 
  * 
  * @author Philipp Jenke
  * 

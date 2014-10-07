@@ -4,6 +4,10 @@
  * 		   Christian Schirin (christian.schirin@haw-hamburg.de)
  * Aufgabe: Aufgabenblatt 1, Aufgabe 2b
  * Verwendete Quellen:
+ * Zeyang Li , Transformations in OpenGL, Carnegie Mellon University,
+ * URL: 
+ * http://www.cs.cmu.edu/afs/cs/academic/class/15462-s09/www/lec/03/lec03a.pdf
+ * (Zugegriffen am 1.10.2014)
  *  
  */
 package computergraphics.scenegraph;
@@ -13,7 +17,7 @@ import javax.media.opengl.GL2;
 import computergraphics.math.Vector3;
 
 /**
- * Diese Klasse ermöglicht es, Rotationen darzustellen.
+ * Diese Klasse ermÃ¶glicht es, Rotationen darzustellen.
  *
  */
 public class RotationNode extends Node {
@@ -24,7 +28,7 @@ public class RotationNode extends Node {
 	/**
 	 * Constructor.
 	 * @param rotAxis Die Rotationsachse, um die gedreht werden soll
-	 * @param angle Der Winkel im Bogenmaß um wie viel gegen den Uhrzeigersinn
+	 * @param angle Der Winkel im GradmaÃŸ um wie viel gegen den Uhrzeigersinn
 	 * 				rotiert werden soll.
 	 */
 	public RotationNode(Vector3 rotAxis, float angle) {
@@ -34,7 +38,7 @@ public class RotationNode extends Node {
 	
 
 	/**
-	 * Sorgt dafür, dass alle Kindknoten dieses Knotens relativ zu einer 
+	 * Sorgt dafÃ¼r, dass alle Kindknoten dieses Knotens relativ zu einer 
 	 * Rotationsachse um einen Winkel rotiert dargestellt werden.
 	 */
 	@Override
@@ -43,7 +47,7 @@ public class RotationNode extends Node {
 		// Remember current state of the render system
 				gl.glPushMatrix();
 
-		// cast von double auf float, um openGL-Funktion verwenden zu können. 
+		// cast von double auf float, um openGL-Funktion verwenden zu kï¿½nnen. 
 		gl.glRotatef(angle, (float) rotAxis.get(0), (float) rotAxis.get(1), (float) rotAxis.get(2));		
 		
 		// Draw all children
