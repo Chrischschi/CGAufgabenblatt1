@@ -1,3 +1,9 @@
+/**
+ * Praktikum WPCG, WS 14/15, Gruppe 2
+ * Gruppe: Andreas Mauritz (andreas.mauritz@haw-hamburg.de)
+ * 		   Christian Schirin (christian.schirin@haw-hamburg.de)
+ * Aufgabe: Aufgabenblatt 1, Aufgabe 1c
+ */
 package computergraphics.scenegraph;
 
 import javax.media.opengl.GL2;
